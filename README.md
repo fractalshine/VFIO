@@ -59,3 +59,36 @@ CPU NODE SOCKET CORE L1d:L1i:L2:L3 ONLINE    MAXMHZ   MINMHZ
  15    0      0    7 7:7:7:0          yes 5000.0000 800.0000
 
 ```
+lstopo -p
+
+```
+Machine (126GB total)
+  Package P#0
+    NUMANode P#0 (126GB)
+    L3 (16MB)
+      L2 (256KB) + L1d (32KB) + L1i (32KB) + Core P#0
+        PU P#0
+        PU P#8
+      L2 (256KB) + L1d (32KB) + L1i (32KB) + Core P#1
+        PU P#1
+        PU P#9
+      L2 (256KB) + L1d (32KB) + L1i (32KB) + Core P#6
+        PU P#6
+        PU P#14
+      L2 (256KB) + L1d (32KB) + L1i (32KB) + Core P#7 + PU P#15
+  HostBridge
+    PCIBridge
+      PCI 01:00.0 (VGA)
+    PCI 00:02.0 (VGA)
+    PCI 00:14.3 (Network)
+    PCI 00:17.0 (SATA)
+      Block(Disk) "sda"
+    PCIBridge
+      PCI 03:00.0 (NVMExp)
+        Block(Disk) "nvme0n1"
+    PCIBridge
+      PCI 04:00.0 (NVMExp)
+        Block(Disk) "nvme1n1"
+    PCI 00:1f.6 (Ethernet)
+      Net "eno2"
+```
