@@ -23,7 +23,7 @@ Config
 * on windows, the MSI_util_v2 gets used every update to reset MSI interrupts on the GPU
 
 Libvirt hooks tree
-
+```
 /etc/libvirt/hooks
 ├── qemu
 └── qemu.d
@@ -34,3 +34,5 @@ Libvirt hooks tree
         └── started
             └── begin
                 └── limit-host-cpus.sh
+
+```
