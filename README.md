@@ -12,7 +12,7 @@ Specs
 
 Config
 
-* libvirt hooks for core isolation needs (in repo)
+* libvirt hooks for core isolation needs, thanks to [passthroughpo.st](https://passthroughpo.st/simple-per-vm-libvirt-hooks-with-the-vfio-tools-hook-helper/) (in repo)
 * Using a custom-built linux with `CONFIG_PREEMPT_VOLUNTARY=y` (fixes long boot time with UEFI guests)
 * Kernel parameters: `intel_iommu=on iommu=pt default_hugepagesz=1G hugepagesz=1G hugepages=20 vfio-pci.ids=10de:1e81,10de:10f8,10de:1ad8,10de:1ad9,1106:3483,8086:a370 loglevel=3 quiet`
 * Added workaround to make onboard bluetooth works again
@@ -38,4 +38,24 @@ Libvirt hooks tree
 
 ```
 
+lscpu
+```
+CPU NODE SOCKET CORE L1d:L1i:L2:L3 ONLINE    MAXMHZ   MINMHZ
+  0    0      0    0 0:0:0:0          yes 5000.0000 800.0000
+  1    0      0    1 1:1:1:0          yes 5000.0000 800.0000
+  2    0      0    2 2:2:2:0          yes 5000.0000 800.0000
+  3    0      0    3 3:3:3:0          yes 5000.0000 800.0000
+  4    0      0    4 4:4:4:0          yes 5000.0000 800.0000
+  5    0      0    5 5:5:5:0          yes 5000.0000 800.0000
+  6    0      0    6 6:6:6:0          yes 5000.0000 800.0000
+  7    0      0    7 7:7:7:0          yes 5000.0000 800.0000
+  8    0      0    0 0:0:0:0          yes 5000.0000 800.0000
+  9    0      0    1 1:1:1:0          yes 5000.0000 800.0000
+ 10    0      0    2 2:2:2:0          yes 5000.0000 800.0000
+ 11    0      0    3 3:3:3:0          yes 5000.0000 800.0000
+ 12    0      0    4 4:4:4:0          yes 5000.0000 800.0000
+ 13    0      0    5 5:5:5:0          yes 5000.0000 800.0000
+ 14    0      0    6 6:6:6:0          yes 5000.0000 800.0000
+ 15    0      0    7 7:7:7:0          yes 5000.0000 800.0000
 
+```
